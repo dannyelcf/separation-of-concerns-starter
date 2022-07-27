@@ -25,7 +25,7 @@ about: A template PR for contributing to this project
 ### HTML
 
 - [ ] the code is well-formatted
-- [ ] the HTML code passes [validator.w3.org](https://validator.w3.org/)
+- [ ] the HTML code passes validation
 - [ ] there are no inline styles (example: `style='color: red;'`)
 - [ ] there are no `<style>` tags with CSS, all styles are hrefs
 - [ ] there is no inline JavaScript (example: `onclick='doSomething()'`)
@@ -49,11 +49,11 @@ about: A template PR for contributing to this project
 - [ ] there is no unused code in comments
 - [ ] all file names are helpful and match their exports
 
-#### src/data.js
+#### /data
 
-- [ ] the file does not import anything
-- [ ] the file only exports JS data (primitives, arrays, objects, ...)
-- [ ] the file does not contain any functions or logic
+- [ ] the files do not import anything
+- [ ] the files only exports JS data (primitives, arrays, objects, ...)
+- [ ] the files do not contain any functions or utils
 - (optional) the data is documented with JSDocs
 
 #### src/init
@@ -65,7 +65,7 @@ about: A template PR for contributing to this project
 
 #### src/listeners
 
-- [ ] the DOM can be queried to find elements
+- [ ] the DOM _is not_ queried to find elements
 - [ ] the DOM _is not_ be modified
 - [ ] handlers are imported and used as callbacks to event listeners
 - [ ] no other functions are imported or used
@@ -75,9 +75,11 @@ about: A template PR for contributing to this project
 
 - [ ] handlers have a JSDoc comment
 - [ ] the function name matches the file name
-- [ ] handlers are used as a callback to `.addEventListener` somewhere in the program
-- [ ] functions from `/logic` or `/procedures` files may be imported and called
-- [ ] functions from `/handlers` may be imported and attached to the DOM with event listeners
+- [ ] handlers are used as a callback to `.addEventListener` somewhere in the
+      program
+- [ ] functions from `/utils` or `/procedures` files may be imported and called
+- [ ] functions from `/handlers` may be imported and attached to the DOM with
+      event listeners
 - [ ] data from `/data.js` may be imported and used
 - [ ] handlers may read and write to the DOM
 - [ ] handlers _do not_ return values that you will need later in the program
@@ -86,19 +88,19 @@ about: A template PR for contributing to this project
 
 - [ ] A DOM element is returned
 - [ ] handlers can be imported and used as callbacks to event listeners
-- [ ] _logic_, _components_ and _procedures_ can also be imported
+- [ ] _utils_, _components_ and _procedures_ can also be imported
 - [ ] there is an HTML test file to render the component with different inputs
 - [ ] each component has a `.test.html` file
 - [ ] bonus points for a unit test `.spec.js` file
 
-#### src/logic
+#### src/utils
 
 - [ ] the handler has a complete and correct JSDoc comment
 - [ ] the function name matches the file name
-- [ ] other functions from `/logic` may be imported and called
+- [ ] other functions from `/utils` may be imported and called
 - [ ] the function _does not_ read or write to the DOM
 - [ ] the function _does not_ log to the console
-- [ ] each logic function has a `.spec.js` file
+- [ ] each utils function has a `.spec.js` file
   - [ ] tests are simple with no extra code
   - [ ] tests are well-named
   - [ ] tests cover common use cases (bonus for edge cases)

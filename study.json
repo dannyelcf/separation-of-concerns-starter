@@ -8,6 +8,7 @@
     "run": true,
     "debug": true,
     "environment": true,
-    "save": true
+    "save": true,
+    "deps":true
   }
 }
