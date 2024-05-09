@@ -3,7 +3,7 @@
 	"proseWrap": "always",
 	"endOfLine": "lf",
 	"trailingComma": "all",
-	"useTabs": true,
+	"useTabs": false,
 	"tabWidth": 2,
 	"semi": true,
 	"bracketSpacing": true,

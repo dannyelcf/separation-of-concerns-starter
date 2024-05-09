@@ -3,15 +3,18 @@
 In this repository we are going to practice all the concepts we learned in the
 module
 [Separation of Concerns](https://github.com/HackYourFutureBelgium/separation-of-concerns).
-To do that, we are going to develop a simple To-Do List 😄.
+
+To do that, we are going to develop this simple To-Do List:
+
+![To-Do List](todo-list.png 'To-Do List')
 
 The requirements are:
 
-- A user can see all the items in their list
-- A user can add a new item to their list
-- A user can remove any item from their list
-- A user can edit the description of each item in their list
-- A user can mark an item as "done" or "not done"
+- [ ] A user can see all the items in their list.
+- [ ] A user can add a new item to their list.
+- [ ] A user can remove any item from their list.
+- [ ] A user can edit the description of each item in their list.
+- [ ] A user can mark an item as "done" or "not done".
 
 ## Setup
 
