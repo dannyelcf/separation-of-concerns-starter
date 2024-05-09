@@ -6,7 +6,7 @@ module
 
 To do that, we are going to develop this simple To-Do List:
 
-![To-Do List](todo-list.png 'To-Do List')
+![To-Do List](todoList.gif 'To-Do List')
 
 The requirements are:
 
