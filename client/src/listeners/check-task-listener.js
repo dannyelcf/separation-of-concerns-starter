@@ -1,8 +1,12 @@
-import { CHECK_TASK, LIST_CONTAINER_ID } from '../data/constants.js';
 import { checkTaskHandler } from '../handlers/check-task-handler.js';
 
 export const checkTaskListener = () => {
-  document
-    .getElementById(LIST_CONTAINER_ID)
-    .addEventListener(CHECK_TASK, checkTaskHandler);
+  const taskList = document.querySelectorAll('.list-item');
+  taskList.forEach((taskRow) => {
+    const taskId = taskRow.getAttribute('id');
+    const checkbox = taskRow.querySelector('input');
+    checkbox.addEventListener('change', (event) => {
+      checkTaskHandler(event, taskId);
+    });
+  });
 };

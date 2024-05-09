@@ -1,8 +1,12 @@
-import { DELETE_TASK, LIST_CONTAINER_ID } from '../data/constants.js';
 import { deleteTaskHandler } from '../handlers/delete-task-handler.js';
 
 export const deleteTaskListener = () => {
-  document
-    .getElementById(LIST_CONTAINER_ID)
-    .addEventListener(DELETE_TASK, deleteTaskHandler);
+  const taskList = document.querySelectorAll('.list-item');
+  taskList.forEach((taskRow) => {
+    const taskId = taskRow.getAttribute('id');
+    const deleteButton = taskRow.querySelector('button');
+    deleteButton.addEventListener('click', (event) => {
+      deleteTaskHandler(event, taskId);
+    });
+  });
 };

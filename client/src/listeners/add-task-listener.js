@@ -1,8 +1,16 @@
-import { ADD_CONTAINER_ID, ADD_TASK } from '../data/constants.js';
 import { addTaskHandler } from '../handlers/add-task-handler.js';
 
 export const addTaskListener = () => {
-  document
-    .getElementById(ADD_CONTAINER_ID)
-    .addEventListener(ADD_TASK, addTaskHandler);
+  const addInput = document.querySelector('#add-container > input');
+  const addButton = document.querySelector('#add-container > button');
+
+  addButton.addEventListener('click', (event) => {
+    addTaskHandler(event, addInput);
+  });
+
+  addInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      addTaskHandler(event, addInput);
+    }
+  });
 };
