@@ -8,9 +8,9 @@ export const renderTaskList = () => {
   const taskListContainer = document.getElementById(LIST_CONTAINER_ID);
   taskListContainer.innerHTML = '';
   state.todoList.forEach((task) => {
-    taskListContainer.append(taskComponent(task));
+    const taskDiv = taskComponent(task);
+    checkTaskListener(taskDiv);
+    deleteTaskListener(taskDiv);
+    taskListContainer.append(taskDiv);
   });
-
-  checkTaskListener();
-  deleteTaskListener();
 };
